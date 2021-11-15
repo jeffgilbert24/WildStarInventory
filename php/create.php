@@ -32,7 +32,7 @@ if (isset($_POST['create'])) {
         header("Location: ../addUser?error= email is required&user_data");
     }
     else{
-        $sql = "INSERT INTO users(firstName, lastName, department, email)
+        $sql = "INSERT INTO employee(firstName, lastName, department, email)
                 VALUES('$firstName', '$lastName', '$department', '$email')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
