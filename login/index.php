@@ -10,13 +10,14 @@
             <?php if (isset($_GET['error'])) { ?>
                 <p class="error"><?php echo $_GET['error']; ?></p>
                 <?php } ?>
-            <label>User Name</label>
-            <input type="text" name="uname" placeholder="User Name"><br>
+            <label>Enter email address</label>
+            <input type="text" name="uname" placeholder="email"><br>
            
-            <label>User Name</label>
-            <input type="upassword" name="upassword" placeholder="Password"><br>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password"><br>
 
             <button type="submit">Log in</button>
+            <h5>SEE ADMIN FOR PASSWORD RESET</h5>
 
         </form>
 

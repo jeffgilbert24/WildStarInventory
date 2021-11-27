@@ -73,6 +73,8 @@
                 <?php } ?>
                 <div class="link-right">
                     <a href="supply.php" class="link-primary">Create</a>
+                    
+                    <a href="../login/logout.php">Logout</a>
                 </div>
             </div>          
     
