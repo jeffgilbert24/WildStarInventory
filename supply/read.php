@@ -59,7 +59,7 @@ session_start()
                             <td><?php echo $rows['itemLocation']; ?></td>
                             <td><?php echo $rows['minQty']; ?></td>
                             <td><?php echo $rows['maxQty']; ?></td>
-                            <td style="color: crimson;"><?php echo $rows['qtyOnHand']; ?></td>
+                            <td><?php echo $rows['qtyOnHand']; ?></td>
                             <td><?php echo $rows['qtyOnOrder']; ?></td>
                             <td><?php echo $rows['qtyRequested']; ?></td>
                             <td><?php echo $rows['needToOrder']; ?></td>
