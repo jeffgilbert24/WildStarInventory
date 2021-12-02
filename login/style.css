@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(163, 178, 184);
+    background-image: url(../image/logo.png);
     display: flex;
     justify-content: center;
     align-items: center;

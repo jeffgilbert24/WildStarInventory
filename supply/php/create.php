@@ -29,7 +29,7 @@ if (isset($_POST['create'])) {
     
     
 
-    echo $user_data;
+    /*echo $user_data;*/
 
     if (empty($itemName)) {
         header("Location: ../supply.php?error= item name is required&user_data");  
@@ -82,7 +82,7 @@ if (isset($_POST['create'])) {
    
     else{
 
-        echo "fine";
+       
         $sql = "INSERT INTO supplies(itemName, department, modelNumber, vendor, costPer, itemLocation, minQty, maxQty, qtyOnHand, qtyOnOrder, qtyRequested, needToOrder)
                 VALUES('$itemName', '$department', '$modelNumber', '$vendor', '$costPer', '$itemLocation', '$minQty', '$maxQty', '$qtyOnHand', '$qtyOnOrder', '$qtyRequested', '$needToOrder')";
             $result = mysqli_query($conn, $sql);

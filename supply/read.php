@@ -1,13 +1,15 @@
-<?php include "php/read.php"; ?>
+<?php include "php/read.php";
+session_start() 
+?>
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Inventory</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-         rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
-         crossorigin="anonymous">
-       <link rel="stylesheet" type="text/css" href="css/style.css">         
-    </head>
+<head>
+    <title>Inventory</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">         
+</head>
     <body>        
         <div class="container"> 
             <div class="box">
@@ -40,9 +42,11 @@
                     </thead>                  
                     <tbody>
                     <?php
+                    $bgred = 'null';
                     $i = 0;
-                        while($rows = mysqli_fetch_assoc($result)){ 
-                        $i++;                       
+                     while($rows = mysqli_fetch_assoc($result)){ 
+                     $i++;                                           
+                  
                     ?>
                         <tr>
                             <th scope="row"><?=$i?></th>
@@ -55,26 +59,33 @@
                             <td><?php echo $rows['itemLocation']; ?></td>
                             <td><?php echo $rows['minQty']; ?></td>
                             <td><?php echo $rows['maxQty']; ?></td>
-                            <td><?php echo $rows['qtyOnHand']; ?></td>
+                            <td style="color: crimson;"><?php echo $rows['qtyOnHand']; ?></td>
                             <td><?php echo $rows['qtyOnOrder']; ?></td>
                             <td><?php echo $rows['qtyRequested']; ?></td>
                             <td><?php echo $rows['needToOrder']; ?></td>
+                            
+                           
                             <td><a href="update.php?Id=<?=$rows['Id']?>" 
                             class="btn btn-success">Update</a>
 
                             <a href="php/delete.php?Id=<?=$rows['Id']?>" 
-                            class="btn btn-danger">Delete</a>                 
+                            class="btn btn-danger">Delete</a>          
                         
                         </td>                           
                         </tr>
-                        <?php } ?>                                        
+                        <?php } ?>  
+                    
                     </tbody>
                 </table>
                 <?php } ?>
-                <div class="link-right">
-                    <a href="supply.php" class="link-primary">Create</a>
-                    
-                    <a href="../login/logout.php">Logout</a>
+            <div class="link-right">                 
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">                                    
+                               
+                    <a href="supply.php" class="link-primary">Create   </a>                    
+                    <a href="../login/logout.php" class="link">Logout</a>
+                    <a href="../users/read.php" class="link">Users</a>
+                    <a href="../vendor/read.php" class="link">Vendors</a>
                 </div>
             </div>          
     

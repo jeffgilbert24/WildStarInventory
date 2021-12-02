@@ -22,8 +22,7 @@
 }
 .link-right {
     display: flex;
-    justify-content: flex-end;
-}
-.bgred {
-    color:red;
+    display: inline-block;
+    justify-content: flex-end;   
+
 }
