@@ -90,6 +90,7 @@
         
         <button type="submit" class="btn btn-primary"
         name="update">Update</button>
+       
         <a href="read.php" class="link-primary">View</a>
         
 

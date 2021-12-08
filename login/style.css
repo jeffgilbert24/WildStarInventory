@@ -1,8 +1,9 @@
-body {
-    background-image: url(../image/logo.png);
+.container {
+    background-color: slategrey;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: auto;
     height: 100vh;
     flex-direction: column;
 }

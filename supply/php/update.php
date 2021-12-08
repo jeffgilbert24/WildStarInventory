@@ -74,23 +74,8 @@ if (isset($_GET['Id'])) {
         else
         if (empty($maxQty)) {
             header("Location: ../update.php?Id=$Id&error= max qty is required");
-        }
-        if (empty($qtyOnHand)) {
-            header("Location: ../update.php?Id=$Id&error= qty on hand is required");  
-        }
-        else
-        if (empty($qtyOnOrder)) {
-            header("Location: ../update.php?Id=$Id&error= qty on order is required");
-        }
-        else
-        if (empty($qtyRequested)) {
-            header("Location: ../update.php?Id=$Id&error= qty requseted is required");
-        }
-        else
-        if (empty($needToOrder)) {
-            header("Location: ../update.php?Id=$Id&error= need to order is required");
-        }
-        else{
+        }      
+        else {
     
             echo "fine";
             $sql = "UPDATE supplies 

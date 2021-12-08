@@ -63,31 +63,14 @@ if (isset($_POST['create'])) {
         header("Location: ../supply.php?error= maxQty is required&user_data");
     }
     else
-    if (empty($qtyOnHand)) {
-        header("Location: ../supply.php?error= qty on hand is required&user_data");
-    }
-    else
-    if (empty($qtyOnOrder)) {
-        header("Location: ../supply.php?error= qtyOnOrder is required&user_data");
-    }
-    else
-    if (empty($qtyRequested)) {
-        header("Location: ../supply.php?error= qty requested is required&user_data");
-    }
-   
-    else
-    if (empty($needToOrder)) {
-        header("Location: ../supply.php?error= need to order is required&user_data");
-    }
-   
-    else{
+   {
 
        
         $sql = "INSERT INTO supplies(itemName, department, modelNumber, vendor, costPer, itemLocation, minQty, maxQty, qtyOnHand, qtyOnOrder, qtyRequested, needToOrder)
                 VALUES('$itemName', '$department', '$modelNumber', '$vendor', '$costPer', '$itemLocation', '$minQty', '$maxQty', '$qtyOnHand', '$qtyOnOrder', '$qtyRequested', '$needToOrder')";
             $result = mysqli_query($conn, $sql);
             if ($result) {
-                echo "success";
+                
             }else {
                 header("Location: ../supply.php?error=unknown error occurred&user_data");
             }

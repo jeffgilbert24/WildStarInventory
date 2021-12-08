@@ -18,7 +18,7 @@ if (isset($_POST['create'])) {
 
     $user_data = 'firstName=' .$firstName. 'lastName=' .$lastName. 'department=' .$department. 'email=' .$email;
 
-    echo $user_data;
+    //echo $user_data;
 
     if (empty($firstName)) {
         header("Location: ../user.php?error= first name is required&user_data");  
@@ -36,16 +36,17 @@ if (isset($_POST['create'])) {
         header("Location: ../user.php?error= email is required&user_data");
     }
     else{
+       // echo "fine";
 
-        echo "fine";
-        $sql = "INSERT INTO employee(firstName, lastName, department, email)
-                VALUES('$firstName', '$lastName', '$department', '$email')";
+      $sql = "INSERT INTO employee(firstName, lastName, department, email)
+                VALUES('$firstName', '$lastName', '$department', '$email')";                
             $result = mysqli_query($conn, $sql);
-            if ($result) {
+
+            if ($result) {                
                 header("Location: ../read.php?success=successfully created");
             }else {
                 header("Location: ../user.php?error=unknown error occurred&user_data");
-            }
+            } 
     }
 
 

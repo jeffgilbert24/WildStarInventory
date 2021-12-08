@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
+    <div class="container">
         <form action="login.php" method="POST">
             <h2>LOGIN</h2>
             <?php if (isset($_GET['error'])) { ?>
@@ -20,6 +21,6 @@
             <h5>SEE ADMIN FOR PASSWORD RESET</h5>
 
         </form>
-
+    </div>
     </body>
 </html>
