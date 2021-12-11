@@ -38,6 +38,11 @@
             <input type="email" class="form-control" id="email" 
             name="email" value="<?=$row['email'] ?>">
         </div>
+        <div class="mb-3">
+        <label for="email">Password</label>
+            <input type="password" class="form-control" id="password" 
+            name="password" value="<?=$row['password'] ?>">
+        </div>
         <input type="text" name ="Id" value="<?=$row['Id']?>"
         hidden>
         

@@ -45,8 +45,7 @@ session_start()
                     $bgred = 'null';
                     $i = 0;
                      while($rows = mysqli_fetch_assoc($result)){ 
-                     $i++;        
-                     
+                     $i++;                     
                                                              
                   
                     ?>
@@ -86,9 +85,23 @@ session_start()
                                
                     <a href="supply.php" class="link-primary">Create   </a>                    
                     <a href="../login/logout.php" class="link">Logout</a>
+                    <?php if( isset($_SESSION['Id']) && ($_SESSION['department'] === `admin`))
+                    {
+                    ?>
+                        <div class="adminTag" style="">
                     <a href="order.php" class="link">Orders</a>
                     <a href="../users/read.php" class="link">Users</a>
                     <a href="../vendor/read.php" class="link">Vendors</a>
+                    </div>
+                    <?php }else{ ?>
+                        
+                    <?php } ?>
+
+                    <div class="adminTag" style="display: none;">
+                    <a href="order.php" class="link">Orders</a>
+                    <a href="../users/read.php" class="link">Users</a>
+                    <a href="../vendor/read.php" class="link">Vendors</a>
+                    </div>
                 </div>
             </div>          
     

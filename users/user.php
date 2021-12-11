@@ -41,7 +41,12 @@
             name="email" value="<?php if(isset($_GET['email'])) 
             echo($_GET['email']); ?>"  placeholder="users email">
         </div>
-        
+        <div class="mb-3">
+           
+            <input type="password" class="form-control" id="password" 
+            name="password" value="<?php if(isset($_GET['password'])) 
+            echo($_GET['password']); ?>"  placeholder="users password">
+        </div>
         <button type="submit" class="btn btn-primary"
         name="create">Submit</button>
         <a href="read.php" class="link-primary">View</a>

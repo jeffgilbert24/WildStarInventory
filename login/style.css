@@ -1,5 +1,7 @@
 .container {
-    background-color: slategrey;
+    background-image: url(../image/logo.png);
+    background-size: 500px;
+    background-color: silver;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +19,7 @@ form {
     width: 500px;
     border: 2px solid #ccc;
     padding: 30px;
-    background: #fff;
+    background: rgb(187, 196, 199);
     border-radius: 15px;
 }
 

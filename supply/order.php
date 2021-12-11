@@ -47,8 +47,8 @@ session_start()
                     $j = 0;
                      while($rows = mysqli_fetch_assoc($result)){ 
                      $i++;   
-                     if($rows['qtyOnOrder'] >0){
-                        $j++;
+                   //  if($rows['qtyOnOrder'] >0){
+                    //    $j++;
                      
                                                              
                   
@@ -71,12 +71,12 @@ session_start()
                             
                            
                             <td>
-
-                                  
+                            <a href="php/cancel.php?Id=<?=$rows['Id']?>" 
+                            class="btn btn-danger">Cancel</a>                               
                         
                         </td>                           
                         </tr>
-                        <?php }} ?>  
+                        <?php } ?>  
                     
                     </tbody>
                 </table>

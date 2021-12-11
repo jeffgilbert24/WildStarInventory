@@ -26,6 +26,7 @@
                             <th scope="col">Last</th>
                             <th scope="col">Department</th>
                             <th scope="col">Email</th>
+                            <th scope="col">Password</th>
                             <th scope="col">Action</th>
                         </tr>
                     </thead>                  
@@ -41,6 +42,7 @@
                             <td><?php echo $rows['lastName']; ?></td>
                             <td><?php echo $rows['department']; ?></td>
                             <td><?php echo $rows['email']; ?></td>
+                            <td><?php echo $rows['password']; ?></td>
                             <td><a href="update.php?Id=<?=$rows['Id']?>" 
                             class="btn btn-success">Update</a>
 

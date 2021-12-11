@@ -80,8 +80,8 @@ if (isset($_GET['Id'])) {
             echo "fine";
             $sql = "UPDATE supplies 
                         SET itemName='$itemName', picture= '$picture', department='$department', modelNumber='$modelNumber', vendor= '$vendor',
-                        costPer= '$costPer', itemLocation= '$itemLocation', minQty= '$minQty', maxQty= '$maxQty', qtyOnHand= '$qtyOnHand',
-                         qtyRequested= '$qtyRequested', needToOrder= '$needToOrder'
+                        costPer= '$costPer', itemLocation= '$itemLocation', minQty= '$minQty', maxQty= '$maxQty', qtyOnHand= '$qtyOnHand', 
+                        qtyOnOrder= '$qtyOnOrder', qtyRequested= '$qtyRequested', needToOrder= '$needToOrder'
 
                         WHERE Id=$Id ";
                 $result = mysqli_query($conn, $sql);
