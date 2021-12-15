@@ -5,6 +5,7 @@ session_start()
 <html>
 <head>
     <title>Inventory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
         crossorigin="anonymous">
@@ -79,31 +80,35 @@ session_start()
                     </tbody>
                 </table>
                 <?php } ?>
-            <div class="link-right">                 
-
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">                                    
-                               
-                    <a href="supply.php" class="link-primary">Create   </a>                    
-                    <a href="../login/logout.php" class="link">Logout</a>
-                    <?php if( isset($_SESSION['Id']) && ($_SESSION['department'] === `admin`))
-                    {
-                    ?>
-                        <div class="adminTag" style="">
-                    <a href="order.php" class="link">Orders</a>
-                    <a href="../users/read.php" class="link">Users</a>
-                    <a href="../vendor/read.php" class="link">Vendors</a>
-                    </div>
-                    <?php }else{ ?>
-                        
-                    <?php } ?>
-
-                    <div class="adminTag" style="display: none;">
-                    <a href="order.php" class="link">Orders</a>
-                    <a href="../users/read.php" class="link">Users</a>
-                    <a href="../vendor/read.php" class="link">Vendors</a>
-                    </div>
+            <div class="link-right">   
+                <?php
+                   // if(isset($_SESSION['department']) === `admin` )
+                    if(isset($_SESSION["email"]) && $_SESSION["department"] !== 'admin'){ 
+                                   
+                ?>
+                
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">  
+                <a href="supply.php" class="link-primary">Create   </a>                    
+                <a href="logout.php" class="link">Logout</a> 
+                
+                
                 </div>
-            </div>          
+                <?php 
+                     } else
+                    {
+                ?>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">  
+                    <a href="supply.php" class="link-primary">Create   </a>                    
+                    <a href="logout.php" class="link">Logout</a>                     
+                    <a href="order.php" class="link">Orders</a>                     
+                    <a href="../users/read.php" class="link">Users</a>
+                    <a href="../vendor/read.php" class="link">Vendors</a> 
+                    
+                    
+                    </div>
+                    <?php  } ?>
+                    
+                </div>          
     
          </div>
     

@@ -34,7 +34,7 @@
            
             <input type="vendorsEmail" class="form-control" id="vendorsEmail" 
             name="vendorsEmail" value="<?php if(isset($_GET['vendorsEmail'])) 
-            echo($_GET['vendorsEmail']); ?>"  placeholder="vendore email">
+            echo($_GET['vendorsEmail']); ?>"  placeholder="vendors email">
         </div>
         
         <button type="submit" class="btn btn-primary"

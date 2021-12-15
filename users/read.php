@@ -3,6 +3,7 @@
 <html>
     <head>
         <title>Users</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
          rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
          crossorigin="anonymous">
@@ -60,7 +61,7 @@
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">              
                                   
                     <a href="user.php" class="link-primary">Create</a>
-                    <a href="../login/logout.php">Logout</a>
+                    <a href="logout.php">Logout</a>
                     <a href="../vendor/read.php">Vendors</a>
                     <a href="../supply/read.php" class="link-primary">Inventory</a> 
                 </div>
