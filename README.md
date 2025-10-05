@@ -1,2 +1,2 @@
 # WildStarInventory
-This is an inventory management system for the company.
+This is an inventory management system for the WildStar communication company. 
